@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgMaterialModule } from '../../ng-material/ng-material.module';
+import { MenuComponent } from './menu/menu.component';
 
 
 @Component({
@@ -8,7 +9,8 @@ import { NgMaterialModule } from '../../ng-material/ng-material.module';
   styleUrls: ['./navbar.component.scss'],
   standalone: true,
   imports: [
-    NgMaterialModule
+    NgMaterialModule,
+    MenuComponent
   ]
 })
 export class NavbarComponent {

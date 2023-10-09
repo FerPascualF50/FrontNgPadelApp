@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavbarComponent } from '../components/navbar/navbar.component';
+//import { NavbarComponent } from '../components/navbar/navbar.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -12,13 +13,15 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
     CommonModule,
     MatToolbarModule, 
     MatButtonModule, 
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [
     CommonModule,
     MatToolbarModule, 
     MatButtonModule, 
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ]
 
 })
