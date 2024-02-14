@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+<ng-container>
+  <!-- <span>{{successFalse}} </span> -->
+</ng-container>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let i of dataPayments" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{i.tournamentname}}
+      </mat-panel-title>
+    </mat-expansion-panel-header >
+    <mat-divider></mat-divider>  <br>
+    <section >
+      <!-- <p>{{ii.name}}</p> -->
+      <p>Club: {{i.tournamentname}} </p>
+      <p>{{i.weekDay}} - {{i.dayNumber}}{{i.month}}{{i.year}} - {{i.hour}} - {{i.method}}</p>
+      <p>Precio: {{i.amount}} </p>
+      <mat-divider></mat-divider>
+    </section>
+    <!-- <section>
+      <p>2º partido</p>
+      <p>Club: La Dupla</p>
+      <p>Viernes 15Mar24 - 19:00</p>
+    </section> -->
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,55 @@
+h2 {
+  color: #10a37f;
+  height: 15px;
+  margin-left: 10px;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+span {
+  height: 15px;
+  margin-left: 10px;
+}
+
+.check-box-position {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.mdc-checkbox {
+  --mdc-checkbox-selected-hover-icon-color: #10a37f !important;
+}
+
+.mdc-checkbox .mdc-checkbox__native-control:enabled:focus:checked~.mdc-checkbox__background,
+.mdc-checkbox .mdc-checkbox__native-control:enabled:focus:indeterminate~.mdc-checkbox__background {
+  --mdc-checkbox-selected-focus-icon-color: #10a37f;
+  background-color: var(--mdc-checkbox-selected-focus-icon-color);
+}
+
+.mat-accent {
+  --mat-option-selected-state-label-text-color: #10a37f;
+}
+
+.example-ripple-checkbox {
+  --mat-option-selected-state-label-text-color: #10a37f;
+}
+
+.mdc-checkbox:hover .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+  border-color: #10a37f;
+  background-color: #10a37f;
+}
+
+.example-form mat-slide-toggle {
+  margin: 20px 0;
+  padding-left: 20px;
+  display: block;
+}
+
+button{
+  margin-left: 20px;
+}
+
+mat-primary {
+  --mdc-text-button-label-text-color: #10a37f;
+}

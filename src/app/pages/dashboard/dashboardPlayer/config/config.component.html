@@ -1,0 +1,18 @@
+<h2>{{title}}</h2>
+
+<section>
+    <section>
+      <span>Habilitar si queres recibir por WhatsApp</span>
+    </section>
+  <ng-container>
+    <form class="example-form" #form="ngForm" 
+    >
+    <!-- (ngSubmit)="alertFormValues(form.form)" -->
+      <mat-slide-toggle ngModel name="enableWifi">Mis horarios de partidos</mat-slide-toggle>
+      <mat-slide-toggle ngModel name="acceptTerms" required>Cuando se abra un torneo cerca de mi ubicación</mat-slide-toggle>
+      <!-- <section>
+        <button mat-stroked-button type="submit"  (click)="openSnackBar()">Guardar</button>
+      </section> -->
+    </form>
+  </ng-container>
+  </section>

@@ -5,25 +5,38 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuComponent } from './components/navbar/menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/error/error.component';
+import { LoginComponent } from '../features/login/login.component';
+import { LandingPageComponent } from '../pages/landing/landing-page.component';
 
 
 @NgModule({
   declarations: [
+  LoginComponent,
+    ErrorComponent,
+    LandingPageComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgMaterialModule,
     NavbarComponent,
     MenuComponent,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
   ],
   exports: [
     NgMaterialModule,
     NavbarComponent,
     MenuComponent,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class SharedModule { }

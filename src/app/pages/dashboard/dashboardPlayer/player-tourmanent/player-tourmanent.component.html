@@ -1,0 +1,150 @@
+<h2 class=" h2 title">{{title}}</h2>
+<section class="filter">
+  <span>Filtrar por Km</span>
+  <mat-slider min="0" max="1000" step="50" showTickMarks discrete [displayWith]="formatLabel">
+    <!-- <input matSliderThumb> -->
+    <input value="min" matSliderStartThumb>
+    <input value="400" matSliderEndThumb>
+  </mat-slider>
+</section>
+
+
+<ng-container *ngFor="let i of dataClubs" class="example-card">
+  <mat-card>
+    <mat-card-header style="border-radius: 2px;">
+      <mat-card-title>{{i.nameClub}} </mat-card-title>
+      <mat-card-subtitle>{{i.state}} - {{i.city}} </mat-card-subtitle>
+      <div mat-card-avatar class="example-header-image"> </div>
+    </mat-card-header>
+    <img mat-card-image src={{i.urlImage}} alt="none">
+    <mat-card-content>
+      <!-- <p>{{i.info}}</p> -->
+      <mat-card-actions>
+        <button mat-stroked-button *ngIf="!disableButtonSign">INFO</button>
+        <button *ngIf="!disableButtonSign" (click)="OnOpenAcordion()" mat-button mat-stroked-button>INSCRIPCION</button>
+
+
+
+      </mat-card-actions>
+      <mat-accordion *ngIf="openSign" class="example-headers-align">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Tus datos
+            </mat-panel-title>
+            <!-- <mat-panel-description> Cerrar -->
+              <mat-icon mat-button (click)="OnCloseSing()">close</mat-icon>
+            <!-- </mat-panel-description> -->
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label plac1eholder="Tu nombre YA">Tu nombre</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label placeholder="Tu apellido YA">Tu apellido</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label placeholder="Tu email YA">Tu e-mail</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select>
+              <mat-option value="one">Octava debil</mat-option>
+              <mat-option value="two">5ta a Fondo</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input matInput type="number" min="18">
+          </mat-form-field> -->
+          <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">Siguiente</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Tu Compañero
+            </mat-panel-title>
+            <!-- <mat-panel-description> -->
+              <!-- <mat-icon mat-button (click)="OnCloseSing()">close</mat-icon> -->
+            <!-- </mat-panel-description> -->
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <mat-label placeholder="Tu nombre YA">Su nombre</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label placeholder="Tu apellido YA">Su apellido</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label placeholder="Tu email YA">Su e-mail</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Anterior</button>
+            <button mat-button color="primary" (click)="nextStep()">Siguiente</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <!-- <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Destination
+            </mat-panel-title>
+            <mat-panel-description>
+              Type the country name
+              <mat-icon>map</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-form-field>
+            <mat-label>Country</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+        </mat-expansion-panel> -->
+
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              No podría jugar a las...
+            </mat-panel-title>
+            <!-- <mat-panel-description>
+              Selecciona los horarios donde NO podes JUGAR
+              <mat-icon>date_range</mat-icon>
+            </mat-panel-description> -->
+          </mat-expansion-panel-header>
+
+          <mat-form-field>
+            <mat-label>Horarios</mat-label>
+            <mat-select>
+              <mat-option value="one">Jueves 12 a 20</mat-option>
+              <mat-option value="two">Viernes 12 a 18</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+          </mat-form-field>
+          <mat-datepicker #picker></mat-datepicker> -->
+
+          <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Anterior</button>
+            <button mat-button color="primary" (click)="nextStep()">Guardar</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

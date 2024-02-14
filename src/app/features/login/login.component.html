@@ -1,0 +1,59 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="body">
+  <div class="login">
+    <mat-spinner *ngIf="loading" class="spiner" diameter="50"></mat-spinner>
+    <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+      <h1 *ngIf="signin">Login</h1>
+      <div>
+        <h4>Test - User: fer@gmail.com Pass: admin123</h4>
+
+      </div>  
+
+      
+      <div *ngIf="!signin">
+        <h1 >Crea Tu cuenta</h1>
+        <p>Registrate en GloboCorto.com para continuar hacia la magia de Padel AI</p>
+      </div>
+      
+      <mat-form-field appearance="outline" class="ancho">
+        <mat-label>e-mail</mat-label>
+        <input type="text" matInput autocomplete="off" formControlName="usuario" matInput placeholder="e-mail" ngModel email>
+        <mat-icon style="color: #10a37f;" matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline" class="ancho">
+        <mat-label>contraseña</mat-label>
+        <input type="password" matInput autocomplete="off" formControlName="password" matInput placeholder="contraseña">
+        <mat-icon style="color: #10a37f;" matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+      
+      <br>
+      
+      <button type="submit" class="ancho button" mat-raised-button [disabled]="form.invalid">Ingresar</button>
+      
+      <div *ngIf="signin">
+        <p>¿No tenes una cuenta?
+          <a style='cursor: pointer;' class="c7f55554e c2a60f02f" aria-label="" (click)="signin=false">Regístrese</a>
+        </p>
+      </div>
+      
+      <div *ngIf="!signin">
+        <p>¿Ya tenes una cuenta?
+          <a style='cursor: pointer;' class="c7f55554e c2a60f02f" aria-label="" (click)="signin=true">Inicia
+            sesíon</a>
+        </p>
+      </div>
+      
+      <div>
+        <span>--------------------------------------- o -----------------------------------</span>
+      </div>
+      
+      <div class="google-btn">
+        <div class="google-icon-wrapper google-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="google button" />
+        </div>
+        <span className="btn-text">Continuar con Google</span>
+      </div>
+    </form>
+  </div>
+</div>

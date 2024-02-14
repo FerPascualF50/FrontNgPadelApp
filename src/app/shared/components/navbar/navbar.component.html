@@ -1,15 +1,25 @@
-<p>
-  <mat-toolbar color="primary">
+  <mat-toolbar class="nav-styles">
     <mat-toolbar-row>
-      <app-menu></app-menu>
-      <span>Padel ia</span>
+      <app-menu *ngIf="logon"></app-menu>
+      <div class="example-spacer">
+      </div>
+      <span style="color: white;">GloboCorto.com</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button style="color: white; " (click)="toLogin()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" title="Login">
         <mat-icon>login</mat-icon>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <button  style="color: white;" *ngIf="logon" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>logout</mat-icon>
       </button>
+      <!-- <div clas="circle"> -->
+
+        <!-- <button > -->
+          <img style="border-radius: 15px;" src="https://avatars.githubusercontent.com/u/99398546?v=4" alt="" size="32" height="32" width="32" data-view-component="true" class="avatar circle">
+
+
+
+          <!-- <img  class="avatar circle" mat-card-image src="https://avatars.githubusercontent.com/u/99398546?v=4" alt="Photo of a Shiba Inu"> -->
+        <!-- </button> -->
+      <!-- </div> -->
     </mat-toolbar-row>
   </mat-toolbar>
-</p>

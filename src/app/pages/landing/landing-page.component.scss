@@ -1,0 +1,201 @@
+
+@keyframes cursor {
+    0% {border-color: #10a37f;}
+    50% {border-color: black};
+}
+
+@keyframes escribiendo {
+    from{ width: 0;}
+    to { width: 100%; }
+}
+
+.principal-container {
+    flex-direction: row;
+    display: flex;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.0178571429em;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.left-container {
+    max-width: calc(100vw - 40vw);
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: calc(100vh - 80px);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.h11{
+    font-family: Monospace;
+    border-right: 2.5px solid #10a37f;
+    animation: cursor 0.5s infinite, escribiendo 4s steps(30, end);
+    white-space: nowrap;
+    overflow: hidden;
+    color: #10a37f;
+}
+
+.h12{
+    font-family: Monospace;
+    border-right: 2.5px solid #10a37f;
+    animation: cursor 0.5s infinite, escribiendo 2s steps(30, end);
+    white-space: nowrap;
+    overflow: hidden;
+    color: #10a37f;
+}
+.h13{
+    font-family: Monospace;
+    border-right: 2.5px solid #10a37f;
+    animation: cursor 0.5s infinite, escribiendo 1s steps(30, end);
+    white-space: nowrap;
+    overflow: hidden;
+    color: #10a37f;
+}
+
+.escribiendo{
+display: inline-block;
+max-width: 97%; // 31 letras maximo
+}
+
+.down-container{
+    font-family: Roboto, sans-serif;
+    color: #10a37f;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 25px;
+}
+
+.button-custom{
+    --mdc-protected-button-container-color: #10a37f;
+    --mdc-protected-button-label-text-color: white
+}
+.up-container{
+    font-family: Roboto, sans-serif;
+    color: #10a37f;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 25px;
+    margin-top: 40vh;
+    }
+span{
+    font-family: Roboto, sans-serif;
+    color: #10a37f;
+    font-size: 20px;
+   }
+
+// .getStartDown{
+//     padding-bottom: 0px;
+// }
+
+.spacer{
+    flex: 1 1 auto;
+    background-color: darkorange;
+}
+
+.Grid {
+    display: flex;
+  }
+  
+  .Grid-cell {
+    flex: 1;
+  }
+
+  /* With gutters */
+.Grid--gutters {
+    margin: -1em 0 0 -1em;
+  }
+  .Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em;
+  }
+  
+  /* Alignment per row */
+  .Grid--top {
+    align-items: flex-start;
+  }
+  .Grid--bottom {
+    align-items: flex-end;
+  }
+  .Grid--center {
+    align-items: center;
+  }
+  
+  /* Alignment per cell */
+  .Grid-cell--top {
+    align-self: flex-start;
+  }
+  .Grid-cell--bottom {
+    align-self: flex-end;
+  }
+  .Grid-cell--center {
+    align-self: center;
+  }
+  /* Base classes for all media */
+  .Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+  .Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  .Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
+  }
+  .Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
+  }
+  
+  /* Small to medium screens */
+  @media (min-width: 24em) {
+    .small-Grid--fit > .Grid-cell {
+      flex: 1;
+    }
+    .small-Grid--full > .Grid-cell {
+      flex: 0 0 100%;
+    }
+    .small-Grid--1of2 > .Grid-cell {
+      flex: 0 0 50%
+    }
+    .small-Grid--1of3 > .Grid-cell {
+      flex: 0 0 33.3333%
+    }
+    .small-Grid--1of4 > .Grid-cell {
+      flex: 0 0 25%
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 48em) {
+    .large-Grid--fit > .Grid-cell {
+      flex: 1;
+    }
+    .large-Grid--full > .Grid-cell {
+      flex: 0 0 100%;
+    }
+    .large-Grid--1of2 > .Grid-cell {
+      flex: 0 0 50%
+    }
+    .large-Grid--1of3 > .Grid-cell {
+      flex: 0 0 33.3333%
+    }
+    .large-Grid--1of4 > .Grid-cell {
+      flex: 0 0 25%
+    }
+  }
+
