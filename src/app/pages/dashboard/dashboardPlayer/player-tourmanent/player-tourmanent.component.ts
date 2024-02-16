@@ -22,9 +22,11 @@ export class PlayerTourmanentComponent {
     { nameClub: 'Central CLub', state: 'Cordoba', city: 'Capital', urlImage: "https://as01.epimg.net/opinion/imagenes/2020/06/09/blogs/1591692680_508101_1591693087_noticia_normal_recorte1.jpg", info: 'Puntos - Sorteos' },
     { nameClub: 'La Dupla Padel', state: 'Cordoba', city: 'Rio Ceballos', urlImage: "https://www.zonadepadel.es/blog/wp-content/uploads/2015/04/star-padel-club-de-padel.jpg", info: 'Premios - Sorteos' },
     { nameClub: 'Padel Center', state: 'Cordoba', city: 'Rio Ceballos', urlImage: "https://www.palco23.com/files/2020/19_redaccion/competiciones/padel/padel-club-jeppesen-728.jpg", info: 'Premios - Puntos ' },
-    { nameClub: 'Pincila Padel', state: 'Cordoba', city: 'Capital', urlImage: "https://assets-global.website-files.com/639778ab6f2e51ed2139df9a/639810f067761fd88b27543e_Hartwall.jpg", info: 'Premios - Puntos - Sorteos' },
-    { nameClub: 'Los Porteños', state: 'Buenos Aires', city: 'Ciudad Autonoma de Buenos Aires', urlImage: "http://www.padelspain.net/userfiles/Augusta_Padel_nominado_PWPA_2020.jpg", info: 'Premios - Puntos' },
-    { nameClub: 'El bana non', state: 'Buenos Aires', city: 'Jarilla Paspada', urlImage: "https://assets-global.website-files.com/639778ab6f2e51ed2139df9a/63c6b6f16998d8624dca6c95_Mejorset-Finland.jpeg", info: 'Premios - Sorteos' },
+    { nameClub: 'Las Playas', state: 'Cordoba', city: 'Capital', urlImage: "https://assets-global.website-files.com/639778ab6f2e51ed2139df9a/639810f067761fd88b27543e_Hartwall.jpg", info: 'Premios - Puntos - Sorteos' },
+    { nameClub: 'Baires Padel', state: 'Buenos Aires', city: 'CABA', urlImage: "http://www.padelspain.net/userfiles/Augusta_Padel_nominado_PWPA_2020.jpg", info: 'Premios - Puntos' },
+    { nameClub: 'Palermo Padel', state: 'Buenos Aires', city: 'CABA', urlImage: "https://assets-global.website-files.com/639778ab6f2e51ed2139df9a/63c6b6f16998d8624dca6c95_Mejorset-Finland.jpeg", info: 'Premios - Sorteos' },
+    { nameClub: '3º Set', state: 'La Coruña', city: 'La coruña', urlImage: "https://as01.epimg.net/opinion/imagenes/2020/06/09/blogs/1591692680_508101_1591693087_noticia_normal_recorte1.jpg", info: 'Premios - Sorteos' },
+
   ];
 
   OnOpenAcordion() {
