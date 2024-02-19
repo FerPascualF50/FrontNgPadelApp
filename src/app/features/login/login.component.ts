@@ -3,20 +3,35 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
+// interface Rol {
+//   value: string;
+//   viewValue: string;
+// }
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
 
-  form: FormGroup
+
+export class LoginComponent {
+  form: FormGroup;
   loading = false;
+  selectedValue: string = '';
+
+  // roles: Rol[] = [
+  //   {value: 'Jugador', viewValue: 'Jugador'},
+  //   {value: 'Organizador', viewValue: 'Organizador'},
+    
+  // ];
 
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
     this.form = this.fb.group({
       usuario: ['', Validators.required],
       password: ['', Validators.required],
+      // rol: ['', Validators.required],
+      
     })
   }
 
@@ -49,7 +64,11 @@ export class LoginComponent {
   fakeLoading() {
     this.loading = true;
     setTimeout(() => {
-      this.router.navigate(['dashboard/player']);
+      this.router.navigate(['dashboard/player/tournaments']);
     }, 1000)
+  }
+
+  onSignup(){
+    this.router.navigate(['signup'])
   }
 }

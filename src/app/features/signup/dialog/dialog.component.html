@@ -1,0 +1,13 @@
+<mat-spinner *ngIf="loading" class="spiner" diameter="50"></mat-spinner>
+
+<section !*ngIf="loading">
+  <h1 mat-dialog-title>Elige tu Rol</h1>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial (click)="onClickRol('player')"
+      _beforeClosed="player">Jugador</button>
+    <!-- cdkFocusInitial -->
+    <!-- (click)="onClickRol(name)" -->
+    <button mat-button mat-dialog-close (click)="onClickRol('owner')">Organizador</button>
+    <!-- (click)="onClickRol(name)" -->
+  </div>
+</section>

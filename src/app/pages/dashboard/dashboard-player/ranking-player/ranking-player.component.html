@@ -1,0 +1,51 @@
+<h2>{{title}}</h2>
+<ng-container>
+  <!-- <span>{{successFalse}} </span> -->
+</ng-container>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let i of dataSource" (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        {{i.circuitName}} - {{i.year}} - Ranking: {{i.rank}} - Puntos: {{i.sumPoints}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <section >
+          <mat-table [dataSource]="i.dataRanking" class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="date">
+              <mat-header-cell *matHeaderCellDef> Fecha Nro. </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="tournament">
+              <mat-header-cell *matHeaderCellDef> Torneo </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.tournament}} </mat-cell>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="instance">
+              <mat-header-cell *matHeaderCellDef> Instancia </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.instance}} </mat-cell>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="points">
+              <mat-header-cell *matHeaderCellDef> Puntos </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.points}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+        
+        </section>
+
+
+
+
+    <!-- </section> -->
+  </mat-expansion-panel>
+</mat-accordion>
