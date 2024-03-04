@@ -1,0 +1,86 @@
+<h2>{{title}}</h2>
+
+<mat-stepper headerPosition="top" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Relacioná</ng-template>
+      <br/>
+      <section>
+        <mat-form-field>
+          <input matInput placeholder="Nombre del torneo" formControlName="firstCtrl" required>
+        </mat-form-field>
+      </section>
+      <section>
+        <mat-form-field>
+          <mat-select placeholder="Elije un circuito">
+            <mat-option *ngFor="let i of circuits" [value]="i.name">
+              {{i.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <section>
+        <mat-form-field>
+          <mat-label>Incluí tus Clubes</mat-label>
+          <mat-select [formControl]="clubs" multiple>
+            <mat-option *ngFor="let c of clubsList" [value]="clubs">{{c}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <!-- <section>
+        <mat-form-field>
+          <mat-label>Incluí las categorias</mat-label>
+          <mat-select [formControl]="category" multiple>
+            <mat-option *ngFor="let c of categoriesList" [value]="clubs">{{c.category}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section> -->
+
+
+      <section>
+        <mat-form-field>
+          <mat-label>Categorias</mat-label>
+          <mat-select [formControl]="category" multiple>
+            <!-- <mat-option>-- None --</mat-option> -->
+            <mat-optgroup *ngFor="let group of categoriesList" [label]="group.group">
+              <mat-option *ngFor="let c of group.category" [value]="c.value">
+                {{c.value}}
+              </mat-option>
+            </mat-optgroup>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <!-- <section class="example-section" [formGroup]="clubs">
+        <h4>Seleccionaste:</h4>
+        {{toppings.value | json}}
+      </section> -->
+
+      <div>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Datos del Torneo</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Volver</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Guardar</ng-template>
+    Llegamos al final.
+    <div>
+      <button mat-button matStepperPrevious>Volver</button>
+      <button mat-button (click)="stepper.reset()">Limpiar Formulario</button>
+    </div>
+  </mat-step>
+</mat-stepper>

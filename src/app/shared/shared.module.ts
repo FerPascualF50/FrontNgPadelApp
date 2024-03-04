@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginComponent } from '../features/login/login.component';
 import { LandingPageComponent } from '../pages/landing/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LandingPageComponent } from '../pages/landing/landing-page.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     NgMaterialModule,

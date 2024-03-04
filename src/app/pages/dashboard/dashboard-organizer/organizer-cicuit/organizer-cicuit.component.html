@@ -1,0 +1,54 @@
+<h2>{{title}}</h2>
+<ng-container>
+  <!-- <span>{{successFalse}} </span> -->
+</ng-container>
+<div class="demo-button-container">
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Crear Circuito</mat-panel-title>
+        <mat-panel-description>click para Crear un circuito</mat-panel-description>
+      </mat-expansion-panel-header>
+      <section class="section-create">
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre del Circuito</mat-label>
+            <input matInput placeholder="value" value="Arena">
+          </mat-form-field>
+        </form>
+        <button mat-raised-button (click)="OnSave(false)" class="demo-button">
+          Guardar
+        </button>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">{{element.position}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nameCircuit">
+    <th mat-header-cell *matHeaderCellDef>Circuito</th>
+    <td mat-cell *matCellDef="let element">{{element.nameCircuit}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="year">
+    <th mat-header-cell *matHeaderCellDef>Año</th>
+    <td mat-cell *matCellDef="let element">{{element.year}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Editar</th>
+    <td mat-cell *matCellDef="let element">
+      <a class="pointer" (click)="OnUpdate('id', true)" matTooltip="Eliminar usuario">
+        <mat-icon>{{element.actions}}</mat-icon>
+      </a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

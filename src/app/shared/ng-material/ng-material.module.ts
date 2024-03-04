@@ -23,9 +23,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule, _MatSlideToggleRequiredValidatorModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatTableModule} from '@angular/material/table';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [],
@@ -57,8 +57,9 @@ import {MatTableModule} from '@angular/material/table';
     MatAutocompleteModule,
     MatDialogModule,
     MatProgressBarModule,
-    MatTableModule
-    
+    MatTableModule,
+    MatStepperModule
+
   ],
   exports: [
     CommonModule,
@@ -88,7 +89,8 @@ import {MatTableModule} from '@angular/material/table';
     MatAutocompleteModule,
     MatDialogModule,
     MatProgressBarModule,
-    MatTableModule
+    MatTableModule,
+    MatStepperModule
   ]
 
 })

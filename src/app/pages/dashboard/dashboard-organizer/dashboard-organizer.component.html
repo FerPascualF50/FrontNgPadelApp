@@ -1,1 +1,27 @@
-<p>dashboard-organizer works!</p>
+<!-- <mat-tab-group>
+  <mat-tab  class='container' label = "Jugadores" > -->
+<!-- <div class="altosidevar"> -->
+<div class="example-container; container, altosidevar" [class.example-is-mobile]="mobileQuery.matches">
+
+  <mat-toolbar-row class="nav-styles">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <div class="example-spacer"></div>
+    <span>Organizadores</span>
+    <div class="example-spacer"></div>
+  </mat-toolbar-row>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" fixedTopGap="56">
+      <mat-nav-list (click)="snav.toggle()">
+        <a mat-list-item routerLink={{organizer.url}}
+          *ngFor="let organizer of organizerMenuList">{{organizer.buttonTitle}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="mi-sidenav-content">
+      <ng-container *ngFor="let organizer of organizerMenuList">
+        <ng-container *ngIf="organizer.url === currentUrl">
+          <ng-container *ngComponentOutlet="organizer.nameComponent"></ng-container>
+        </ng-container>
+      </ng-container>
+    </mat-sidenav-content>

@@ -1,0 +1,43 @@
+<h2>{{title}}</h2>
+
+<div class="demo-button-container">
+  <button [routerLink]="['create']" mat-raised-button class="demo-button">
+    Crear Torneo
+  </button>
+</div>
+<!-- <ng-container *ngComponentOutlet="nameComponent"></ng-container> -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">{{element.position}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nameTournament">
+    <th mat-header-cell *matHeaderCellDef>Torneo</th>
+    <td mat-cell *matCellDef="let element">{{element.nameTournament}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nameCircuit">
+    <th mat-header-cell *matHeaderCellDef>Circuito</th>
+    <td mat-cell *matCellDef="let element">{{element.nameCircuit}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="startDay">
+    <th mat-header-cell *matHeaderCellDef>Comienza</th>
+    <td mat-cell *matCellDef="let element">{{element.startDay}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Editar</th>
+    <td mat-cell *matCellDef="let element">
+      <a class="pointer" (click)="OnUpdate('id', true)" matTooltip="Eliminar usuario">
+        <mat-icon>{{element.actions}}</mat-icon>
+      </a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<!-- </ng-container> -->

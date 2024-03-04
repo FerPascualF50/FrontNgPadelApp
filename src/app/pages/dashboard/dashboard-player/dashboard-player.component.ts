@@ -33,16 +33,6 @@ export class DashboardPlayerComponent implements OnDestroy, AfterViewInit {
     { buttonTitle: 'Configuraciones', url: '/dashboard/player/config', nameComponent: ConfigComponent },
     { buttonTitle: 'Pagos', url: '/dashboard/player/payments', nameComponent: PaymentsComponent },
   ];
-  ownerMenuList: any = [
-    { buttonTitle: 'Circuitos', url: 'circuits' },
-    { buttonTitle: 'Clubes', url: 'clubs' },
-    { buttonTitle: 'Torneos', url: 'tournamets' },
-    { buttonTitle: 'Categorias', url: 'categories' },
-    { buttonTitle: 'Jugadores', url: 'players' },
-    { buttonTitle: 'Resultados', url: 'results' },
-    { buttonTitle: 'Pagos', url: 'payments' },
-    { buttonTitle: 'Racking', url: 'rackings' },
-  ];
 
   // titlebuttons = Array.from({ length: this.playerMenuList.length },(_, i) => `${this.playerMenuList[i]}`);
   // urls = Array.from({ length: this.playerMenuList.length },(_, i) => `${this.playerMenuList[i].url}`);

@@ -3,9 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { LandingPageComponent } from './pages/landing/landing-page.component';
 import { CommonModule } from '@angular/common';
-// import { LoginComponent } from './features/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { SignupComponent } from './features/signup/signup.component';
 import { DialogComponent } from './features/signup/dialog/dialog.component';
@@ -17,13 +15,21 @@ import { NotificationsComponent } from './pages/dashboard/dashboard-player/notif
 import { ConfigComponent } from './pages/dashboard/dashboard-player/config/config.component';
 import { PaymentsComponent } from './pages/dashboard/dashboard-player/payments/payments.component';
 import { RankingPlayerComponent } from './pages/dashboard/dashboard-player/ranking-player/ranking-player.component';
+import { OrganizerCicuitComponent } from './pages/dashboard/dashboard-organizer/organizer-cicuit/organizer-cicuit.component';
+import { OrganizerClubsComponent } from './pages/dashboard/dashboard-organizer/organizer-clubs/organizer-clubs.component';
+import { OrganizerTournamentComponent } from './pages/dashboard/dashboard-organizer/organizer-tournament/organizer-tournament.component';
+import { OrganizerCategoriesComponent } from './pages/dashboard/dashboard-organizer/organizer-categories/organizer-categories.component';
+import { OrganizerPlayersComponent } from './pages/dashboard/dashboard-organizer/organizer-players/organizer-players.component';
+import { OrganizerResultsComponent } from './pages/dashboard/dashboard-organizer/organizer-results/organizer-results.component';
+import { OrganizerPaymentsComponent } from './pages/dashboard/dashboard-organizer/organizer-payments/organizer-payments.component';
+import { OrganizerKeysComponent } from './pages/dashboard/dashboard-organizer/organizer-keys/organizer-keys.component';
+import { CreateTournamentComponent } from './pages/dashboard/dashboard-organizer/organizer-tournament/create-tournament/create-tournament.component';
+import { CreateClubComponent } from './pages/dashboard/dashboard-organizer/organizer-clubs/create-club/create-club.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // LandingPageComponent,
-    // LoginComponent,
     DashboardPlayerComponent,
     DashboardOrganizerComponent,
     PlayerTourmanentComponent,
@@ -34,6 +40,16 @@ import { RankingPlayerComponent } from './pages/dashboard/dashboard-player/ranki
     PaymentsComponent,
     SignupComponent,
     DialogComponent,
+    OrganizerCicuitComponent,
+    OrganizerClubsComponent,
+    OrganizerTournamentComponent,
+    OrganizerCategoriesComponent,
+    OrganizerPlayersComponent,
+    OrganizerResultsComponent,
+    OrganizerPaymentsComponent,
+    OrganizerKeysComponent,
+    CreateTournamentComponent,
+    CreateClubComponent,
   ],
   imports: [
     BrowserModule,

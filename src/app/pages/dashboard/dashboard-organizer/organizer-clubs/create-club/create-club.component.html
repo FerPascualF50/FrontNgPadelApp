@@ -1,0 +1,55 @@
+<h2>{{title}}</h2>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Usuario creador del torneo</mat-label>
+    <input matInput disabled value={{userOrganizerName}}>
+  </mat-form-field>
+
+  <!-- <table class="example-full-width" cellspacing="0"><tr>
+      <td> -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre del Club</mat-label>
+    <input matInput autocomplete="off">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Cantidad de Canchas/Pistas</mat-label>
+    <input matInput autocomplete="off" type="number" min="0" max="99" inputmode="numeric">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Dirección</mat-label>
+    <input matInput placeholder="Av.San Martin 5600" autocomplete="off">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Pais</mat-label>
+    <mat-select name="food">
+      <mat-option *ngFor="let country of dataCountries?.countries" [value]="country.id">
+        {{country.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Provincia o Estado</mat-label>
+    <input matInput placeholder="Ej. Cordoba">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Ciudad</mat-label>
+    <input matInput placeholder="Ej. Rio Ceballos">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Postal Code</mat-label>
+    <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Address 2</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+  <!-- </p> -->
+
+</form>
