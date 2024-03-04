@@ -64,7 +64,7 @@ export class LoginComponent {
   fakeLoading() {
     this.loading = true;
     setTimeout(() => {
-      this.router.navigate(['dashboard/player/tournaments']);
+      this.router.navigate(['dashboard/organizer']);
     }, 1000)
   }
 
